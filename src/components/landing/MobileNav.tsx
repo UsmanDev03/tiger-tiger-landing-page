@@ -63,7 +63,6 @@ export function MobileNav() {
                 ))}
               </ul>
 
-
               {/* Tiger Theme CTA Button */}
               <a
                 href="#apply"

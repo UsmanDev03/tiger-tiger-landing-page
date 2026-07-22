@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as CircleCheck, a as Truck, b as Boxes, c as ShieldCheck, d as Minus, f as Menu, g as Clock3, h as FileCheckCorner, i as UserCheck, l as Plus, m as Layers, n as Warehouse, o as TrendingUp, p as LoaderCircle, r as UtensilsCrossed, s as Store, t as X, u as PackageCheck, v as ChefHat, x as ArrowRight, y as Check } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BpsIatph.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CvbikjGL.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var hero_dishes_default = "/assets/hero-dishes-Cryt3qfV.jpg";
@@ -349,7 +349,7 @@ function MobileNav() {
 		type: "button",
 		"aria-label": "Open navigation",
 		onClick: () => setOpen(true),
-		className: "inline-flex h-10 w-10 items-center justify-center rounded-lg text-plum md:hidden",
+		className: "inline-flex h-10 w-10 items-center justify-center rounded-lg text-amber-500 hover:bg-amber-500/10 md:hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, {
 			className: "h-6 w-6",
 			"aria-hidden": true
@@ -357,32 +357,35 @@ function MobileNav() {
 	}), open && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "fixed inset-0 z-50 md:hidden",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "absolute inset-0 bg-black/50",
+			className: "absolute inset-0 bg-black/60 backdrop-blur-sm",
 			onClick: () => setOpen(false)
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "absolute right-0 top-0 h-full w-72 bg-white p-6 shadow-2xl",
+			className: "absolute right-0 top-0 h-full w-80 p-6 text-white flex flex-col items-end",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "flex justify-end",
+				className: "flex justify-end w-full pb-4",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 					"aria-label": "Close navigation",
 					onClick: () => setOpen(false),
-					className: "inline-flex h-10 w-10 items-center justify-center rounded-lg text-plum",
+					className: "inline-flex h-10 w-10 items-center justify-center rounded-lg text-amber-500 hover:bg-white/10 transition",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
-						className: "h-6 w-6",
+						className: "h-7 w-7",
 						"aria-hidden": true
 					})
 				})
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-				className: "mt-4 flex flex-col gap-1",
-				children: [links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					href: l.href,
-					onClick: () => setOpen(false),
-					className: "rounded-lg px-3 py-3 text-base font-semibold text-plum hover:bg-secondary",
-					children: l.label
-				}, l.href)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+				className: "w-full flex flex-col bg-neutral-950 p-4 rounded-3xl border border-amber-500/20 shadow-2xl",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+					className: "flex flex-col w-full",
+					children: links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: l.href,
+						onClick: () => setOpen(false),
+						className: "block px-4 py-3.5 text-base font-semibold text-white transition hover:text-amber-400 hover:bg-amber-500/10 border-b border-amber-500/15 rounded-lg",
+						children: l.label
+					}) }, l.href))
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 					href: "#apply",
 					onClick: () => setOpen(false),
-					className: "btn-cta mt-4",
+					className: "mt-6 w-full text-center rounded-xl bg-amber-500 px-4 py-3.5 text-base font-bold text-black transition hover:bg-amber-400 shadow-md shadow-amber-500/20",
 					children: "Apply for a Trade Account"
 				})]
 			})]
