@@ -1,0 +1,123 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-plum: var(--plum);
+  --color-plum-dark: var(--plum-dark);
+  --color-crimson: var(--crimson);
+  --color-orange-cta: var(--orange-cta);
+  --color-orange-cta-hover: var(--orange-cta-hover);
+  --color-offwhite: var(--offwhite);
+  --color-ink: var(--ink);
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Brand */
+  --plum: oklch(0.28 0.09 336);           /* #4A154B-ish */
+  --plum-dark: oklch(0.22 0.08 336);      /* #3B1333-ish */
+  --crimson: oklch(0.42 0.18 27);         /* #8B0000-ish */
+  --orange-cta: oklch(0.72 0.19 55);      /* #F97316 vibrant */
+  --orange-cta-hover: oklch(0.66 0.20 47);
+  --offwhite: oklch(0.985 0.005 90);      /* #FAF9F6 */
+  --ink: oklch(0.16 0.01 270);            /* near-black footer */
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.02 300);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 300);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 300);
+  --primary: var(--plum);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.01 300);
+  --secondary-foreground: var(--plum);
+  --muted: oklch(0.96 0.01 300);
+  --muted-foreground: oklch(0.45 0.02 300);
+  --accent: var(--orange-cta);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.92 0.01 300);
+  --input: oklch(0.92 0.01 300);
+  --ring: var(--orange-cta);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--orange-cta);
+  color: white;
+  font-weight: 700;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 8px 24px -8px color-mix(in oklab, var(--orange-cta) 55%, transparent);
+  transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+  &:hover {
+    background-color: var(--orange-cta-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px -10px color-mix(in oklab, var(--orange-cta) 65%, transparent);
+  }
+}
+
+@utility btn-ghost-plum {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--plum);
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color .18s ease;
+  &:hover { border-color: var(--orange-cta); }
+}
