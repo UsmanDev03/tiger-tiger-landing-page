@@ -115,6 +115,7 @@ function LandingPage() {
             <a href="#why" className="text-sm font-semibold text-plum hover:text-orange-cta">Why Stock Us</a>
             <a href="#range" className="text-sm font-semibold text-plum hover:text-orange-cta">Product Range</a>
             <a href="#sectors" className="text-sm font-semibold text-plum hover:text-orange-cta">Sectors</a>
+            <a href="#video-intro" className="text-sm font-semibold text-plum hover:text-orange-cta">Our Story</a>
             <a href="#distribution" className="text-sm font-semibold text-plum hover:text-orange-cta">Distribution</a>
             <a href="#faq" className="text-sm font-semibold text-plum hover:text-orange-cta">FAQ</a>
           </nav>
@@ -138,8 +139,8 @@ function LandingPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-orange-cta" /> UK Trade Only
               </span>
               <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-                Sell the Asian Flavours{" "}
-                <span className="text-orange-cta">Britain Actually Wants</span>
+                We Offer Full Pan Asian Range{" "}
+                <span className="text-orange-cta">with Hassle Free Trade Supply Across UK</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
                 Authentic Pan-Asian recipes at trade pricing, distributed nationwide across the UK
@@ -292,8 +293,107 @@ function LandingPage() {
           </div>
         </section>
 
+        {/* ===== NEW: VIDEO INTRO SECTION ===== */}
+        <section id="video-intro" className="py-20 sm:py-24 bg-white">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    {/* Section label */}
+    <div className="mb-8 text-center">
+      <span className="inline-flex items-center gap-2 rounded-full bg-plum/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-plum">
+        <span className="h-2 w-2 rounded-full bg-orange-cta" />
+        Watch our story
+      </span>
+    </div>
+
+    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
+      {/* Video column – larger, with professional overlay */}
+      <Reveal>
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 bg-plum-dark/5">
+          <video
+            id="introVideo"
+            className="aspect-[4/3] w-full object-cover"
+            poster="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&h=600&fit=crop&crop=center"
+            controls
+            preload="metadata"
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Play overlay – hidden when video is playing */}
+          <div
+            id="videoOverlay"
+            className="absolute inset-0 flex cursor-pointer items-center justify-center bg-gradient-to-b from-black/10 via-black/40 to-black/60 transition-opacity duration-500"
+          >
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-orange-cta text-white shadow-2xl shadow-orange-cta/40 transition-transform duration-300 hover:scale-105 hover:shadow-orange-cta/60">
+              <svg
+                className="ml-1 h-10 w-10"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Content column – unchanged (exact copy from screenshot) */}
+      <Reveal delay={0.1}>
+        <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
+          Backed by JK Foods, One of the UK's Leading Asian Food Distributors
+        </p>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Tiger Tiger Foods is distributed across the UK by JK Foods. Every order you place
+          is picked, packed and delivered by a team with decades of trade experience and a
+          national network already serving thousands of retail and foodservice sites. Stock
+          sits in UK warehouses. Orders are processed the same working day where possible.
+          You get a named account manager who knows your business, your order pattern and
+          your delivery window, so nothing hangs on a call centre queue. Registration,
+          pricing, ordering and support all run through one point of contact. No juggling
+          suppliers. No chasing paperwork.
+        </p>
+        <ul className="mt-8 space-y-3">
+          <li className="flex items-start gap-3">
+            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+              <Check className="h-4 w-4" aria-hidden />
+            </span>
+            <span className="text-sm text-foreground sm:text-base">
+              48 to 72 hour standard UK delivery
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+              <Check className="h-4 w-4" aria-hidden />
+            </span>
+            <span className="text-sm text-foreground sm:text-base">
+              UK held stock across the full range
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+              <Check className="h-4 w-4" aria-hidden />
+            </span>
+            <span className="text-sm text-foreground sm:text-base">
+              One named account manager per partner
+            </span>
+          </li>
+        </ul>
+        {/* Optional extra CTA */}
+        <div className="mt-8">
+          <a href="#apply" className="btn-cta text-sm">
+            Start your trade application <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+        </div>
+      </Reveal>
+    </div>
+  </div>
+</section>
+
         {/* DISTRIBUTION */}
-        <section id="distribution" className="py-20 sm:py-24">
+        <section id="distribution" className="py-20 sm:py-24 bg-offwhite">
           <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
             <Reveal>
               <img
