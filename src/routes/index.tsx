@@ -344,6 +344,7 @@ function LandingPage() {
       <Reveal delay={0.1}>
         <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
           Backed by JK Foods, One of the UK's Leading Asian Food Distributors
+          
         </p>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
           Tiger Tiger Foods is distributed across the UK by JK Foods. Every order you place
