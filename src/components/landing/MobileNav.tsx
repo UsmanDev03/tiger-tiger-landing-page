@@ -6,6 +6,7 @@ const links = [
   { href: "#why", label: "Why Stock Us" },
   { href: "#range", label: "Product Range" },
   { href: "#sectors", label: "Sectors" },
+  { href: "#video-intro", label: "Our Story" },
   { href: "#distribution", label: "Distribution" },
   { href: "#faq", label: "FAQ" },
 ];
