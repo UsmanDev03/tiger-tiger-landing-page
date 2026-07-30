@@ -34,30 +34,17 @@ export function TradeForm() {
         <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-orange-cta" aria-hidden /> Strictly trade only</span>
         <span className="inline-flex items-center gap-1.5"><FileCheck2 className="h-4 w-4 text-orange-cta" aria-hidden /> Full price list sent on approval</span>
       </div>
-
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Field label="Business Name" name="business" required />
-        <Field label="Contact Person" name="contact" required />
-        <Field label="Business Email" name="email" type="email" required />
-        <Field label="Phone Number" name="phone" type="tel" required />
-        <div className="flex flex-col">
-          <label className="mb-1.5 text-sm font-semibold text-plum">Business Type</label>
-          <select
-            name="type"
-            required
-            className="h-11 rounded-lg border border-border bg-white px-3 text-sm outline-none focus:border-orange-cta focus:ring-2 focus:ring-orange-cta/30"
-            defaultValue=""
-          >
-            <option value="" disabled>Select…</option>
-            <option>Retail / Convenience</option>
-            <option>Cash &amp; Carry / Wholesale</option>
-            <option>Restaurant / Takeaway</option>
-            <option>Caterer / Foodservice</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <Field label="UK Postcode" name="postcode" required />
-      </div>
+<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+  <Field label="Contact Name" name="contact" required />
+  <Field label="Business Name" name="business" required />
+  <div className="sm:col-span-2">
+    <Field label="Company Registration Number" name="companyRegistration" required />
+  </div>
+  <Field label="Company VAT Number" name="vatNumber" />
+  <Field label="Position in Business" name="position" required />
+  <Field label="Email" name="email" type="email" required />
+  <Field label="Phone" name="phone" type="tel" required />
+</div>
 
       <button
         type="submit"

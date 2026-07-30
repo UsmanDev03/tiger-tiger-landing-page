@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "motion/react";
-import curry from "@/assets/cat-curry.jpg";
-import noodles from "@/assets/cat-noodles.jpg";
-import coconut from "@/assets/cat-coconut.jpg";
-import snacks from "@/assets/cat-snacks.jpg";
+import curry from "@/assets/noodles.jpeg";
+import noodles from "@/assets/rice.png";
+import coconut from "@/assets/frozen.png";
+import snacks from "@/assets/drinks.jpeg";
 
 const items = [
   { title: "Curry Pastes & Cooking Sauces", tag: "Signature range", img: curry },

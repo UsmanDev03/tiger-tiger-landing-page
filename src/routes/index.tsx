@@ -14,14 +14,14 @@ import {
   UserCheck,
   Boxes,
 } from "lucide-react";
-import heroImg from "@/assets/hero-dishes.jpg";
-import warehouseImg from "@/assets/warehouse.jpg";
+import heroImg from "@/assets/tt-landing-hero.png";
+import warehouseImg from "@/assets/warehouse.jpeg";
 import { TradeForm } from "@/components/landing/TradeForm";
 import { FAQAccordion } from "@/components/landing/FAQAccordion";
 import { ProductCarousel } from "@/components/landing/ProductCarousel";
 import { Reveal } from "@/components/landing/Reveal";
 import { MobileNav } from "@/components/landing/MobileNav";
-
+import videoSrc from "@/assets/video.mp4";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -96,7 +96,7 @@ const values = [
 
 function LandingPage() {
   return (
-    <div className="min-h-screen bg-white text-foreground">
+    <div className="min-h-screen bg-[#571252] text-white">
       {/* Top announcement bar */}
       <div className="bg-plum text-white">
         <p className="mx-auto max-w-7xl px-4 py-2.5 text-center text-xs font-medium tracking-wide sm:text-sm">
@@ -105,7 +105,7 @@ function LandingPage() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-border bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-white/15 bg-white backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
           <a href="#">
             <img src="/logo.avif" alt="Tiger Tiger" className="h-12 w-auto" />
@@ -115,9 +115,9 @@ function LandingPage() {
             <a href="#why" className="text-sm font-semibold text-plum hover:text-orange-cta">Why Stock Us</a>
             <a href="#range" className="text-sm font-semibold text-plum hover:text-orange-cta">Product Range</a>
             <a href="#sectors" className="text-sm font-semibold text-plum hover:text-orange-cta">Sectors</a>
-            <a href="#video-intro" className="text-sm font-semibold text-plum hover:text-orange-cta">Our Story</a>
-            <a href="#distribution" className="text-sm font-semibold text-plum hover:text-orange-cta">Distribution</a>
-            <a href="#faq" className="text-sm font-semibold text-plum hover:text-orange-cta">FAQ</a>
+            <a href="#video-intro" className="text-sm font-semibol text-plum  hover:text-orange-cta">Our Story</a>
+            <a href="#distribution" className="text-sm font-semibold text-plum  hover:text-orange-cta">Distribution</a>
+            <a href="#faq" className="text-sm font-semibold text-white hover:text-orange-cta">FAQ</a>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -131,7 +131,7 @@ function LandingPage() {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-plum via-plum-dark to-crimson text-white">
+        <section className="relative overflow-hidden bg-plum/90 text-white">
           <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-orange-cta/20 blur-3xl" aria-hidden />
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-24">
             <div className="flex flex-col justify-center">
@@ -178,24 +178,24 @@ function LandingPage() {
               <img
                 src={heroImg}
                 alt="Premium Pan-Asian dishes — Thai green curry, stir-fried noodles, jasmine rice with curry paste and coconut milk"
-                width={1280}
-                height={1280}
+                width={1400}
+                height={1400}
                 fetchPriority="high"
                 decoding="async"
-                className="relative aspect-square w-full rounded-3xl object-cover shadow-2xl ring-1 ring-white/10"
+                className="relative aspect-square w-full rounded-3xl object-contain "
               />
             </div>
           </div>
         </section>
 
         {/* VALUE PROPS */}
-        <section id="why" className="bg-offwhite py-20 sm:py-24">
+        <section id="why" className="bg-plum/90 py-20 text-white sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <Reveal className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
+              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
                 Why buyers keep us in the range
               </p>
-              <h2 className="mt-3 text-3xl font-black text-plum sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                 Four Reasons Buyers Keep Us on the Order Sheet
               </h2>
             </Reveal>
@@ -203,12 +203,12 @@ function LandingPage() {
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
               {values.map((v, i) => (
                 <Reveal key={v.title} delay={i * 0.08}>
-                  <article className="group h-full rounded-2xl border-t-4 border-plum bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:-translate-y-1 hover:shadow-xl">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-plum/10 text-plum transition group-hover:bg-orange-cta group-hover:text-white">
+                  <article className="group h-full rounded-2xl border-t-4 border-orange-cta bg-white/10 p-8 shadow-sm ring-1 ring-white/10 backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition group-hover:bg-orange-cta group-hover:text-white">
                       <v.icon className="h-6 w-6" aria-hidden />
                     </div>
-                    <h3 className="mt-5 text-xl font-bold text-plum">{v.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    <h3 className="mt-5 text-xl font-bold text-white">{v.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-white/80 sm:text-base">
                       {v.body}
                     </p>
                   </article>
@@ -219,14 +219,14 @@ function LandingPage() {
         </section>
 
         {/* PRODUCT RANGE */}
-        <section id="range" className="py-20 sm:py-24">
+        <section id="range" className="bg-plum/90 py-20 text-white sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <Reveal className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <Reveal className="mx-auto max-w-2xl text-center">
               <div className="max-w-2xl">
-                <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
+                <p className="text-2xl text-center font-bold uppercase tracking-wider text-orange-cta">
                   The Range
                 </p>
-                <h2 className="mt-3 text-3xl font-black text-plum sm:text-4xl">
+                <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                   A Range Wide Enough to Cover the Whole Menu
                 </h2>
               </div>
@@ -242,11 +242,11 @@ function LandingPage() {
         </section>
 
         {/* SECTORS */}
-        <section id="sectors" className="bg-offwhite py-20 sm:py-24">
+        <section id="sectors" className="bg-plum/90 py-20 text-white sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <Reveal className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">Sectors</p>
-              <h2 className="mt-3 text-3xl font-black text-plum sm:text-4xl">
+              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">Sectors</p>
+              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                 Built for Your Side of the Trade
               </h2>
             </Reveal>
@@ -271,8 +271,8 @@ function LandingPage() {
                 },
               ].map((s, i) => (
                 <Reveal key={s.title} delay={i * 0.1}>
-                  <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-plum p-8 text-white shadow-xl sm:p-10">
-                    <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-orange-cta/20 blur-3xl transition group-hover:bg-orange-cta/30" aria-hidden />
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/10 p-8 text-white shadow-xl ring-1 ring-white/10 backdrop-blur sm:p-10">
+                    <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full  blur-3xl transition group-hover:bg-orange-cta/30" aria-hidden />
                     <div className="relative">
                       <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-orange-cta">
                         <s.icon className="h-7 w-7" aria-hidden />
@@ -292,109 +292,76 @@ function LandingPage() {
             </div>
           </div>
         </section>
-
-        {/* ===== NEW: VIDEO INTRO SECTION ===== */}
-        <section id="video-intro" className="py-20 sm:py-24 bg-white">
+{/* ===== VIDEO INTRO SECTION ===== */}
+<section id="video-intro" className="bg-plum/90 py-20 text-white sm:py-24">
   <div className="mx-auto max-w-7xl px-4 sm:px-6">
-    {/* Section label */}
     <div className="mb-8 text-center">
-      <span className="inline-flex items-center gap-2 rounded-full bg-plum/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-plum">
+      <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
         <span className="h-2 w-2 rounded-full bg-orange-cta" />
         Watch our story
       </span>
     </div>
+   <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[1.4fr_1fr]">
+  {/* Video column - h-full lagane se yeh right side wale content ke barabar ho jayega */}
+  <div className="relative flex flex-col rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white/5 w-full h-full">
+    <video
+      id="introVideo"
+      className="w-full h-full min-h-[450px] object-cover"
+      controls
+      preload="metadata"
+    >
+      <source 
+        src="https://backend.tigertigerfoods.com/public/assets/Video/tiger_tiger_video.mp4" 
+        type="video/mp4" 
+      />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
-      {/* Video column – larger, with professional overlay */}
-      <Reveal>
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 bg-plum-dark/5">
-          <video
-            id="introVideo"
-            className="aspect-[4/3] w-full object-cover"
-            poster="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&h=600&fit=crop&crop=center"
-            controls
-            preload="metadata"
-          >
-            <source
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+  {/* Content column */}
+  <div className="flex flex-col justify-center">
+    <h3 className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
+      Backed by JK Foods, One of the UK's Leading Asian Food Distributors
+    </h3>
+    <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+      Tiger Tiger Foods is distributed across the UK by JK Foods. Every order you place is picked, packed and delivered by a team with decades of trade experience and a national network already serving thousands of retail and foodservice sites. Stock sits in UK warehouses. Orders are processed the same working day where possible. You get a named account manager who knows your business, your order pattern and your delivery window, so nothing hangs on a call centre queue. Registration, pricing, ordering and support all run through one point of contact. No juggling suppliers. No chasing paperwork.
+    </p>
 
-          {/* Play overlay – hidden when video is playing */}
-          <div
-            id="videoOverlay"
-            className="absolute inset-0 flex cursor-pointer items-center justify-center bg-gradient-to-b from-black/10 via-black/40 to-black/60 transition-opacity duration-500"
-          >
-            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-orange-cta text-white shadow-2xl shadow-orange-cta/40 transition-transform duration-300 hover:scale-105 hover:shadow-orange-cta/60">
-              <svg
-                className="ml-1 h-10 w-10"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <polygon points="5,3 19,12 5,21" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </Reveal>
+    {/* Checkmarks List */}
+    <ul className="mt-6 space-y-3">
+      <li className="flex items-center gap-3 text-sm sm:text-base text-white/90">
+        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+          ✓
+        </span>
+        48 to 72 hour standard UK delivery
+      </li>
+      <li className="flex items-center gap-3 text-sm sm:text-base text-white/90">
+        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+          ✓
+        </span>
+        UK held stock across the full range
+      </li>
+      <li className="flex items-center gap-3 text-sm sm:text-base text-white/90">
+        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+          ✓
+        </span>
+        One named account manager per partner
+      </li>
+    </ul>
 
-      {/* Content column – unchanged (exact copy from screenshot) */}
-      <Reveal delay={0.1}>
-        <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
-          Backed by JK Foods, One of the UK's Leading Asian Food Distributors
-          
-        </p>
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Tiger Tiger Foods is distributed across the UK by JK Foods. Every order you place
-          is picked, packed and delivered by a team with decades of trade experience and a
-          national network already serving thousands of retail and foodservice sites. Stock
-          sits in UK warehouses. Orders are processed the same working day where possible.
-          You get a named account manager who knows your business, your order pattern and
-          your delivery window, so nothing hangs on a call centre queue. Registration,
-          pricing, ordering and support all run through one point of contact. No juggling
-          suppliers. No chasing paperwork.
-        </p>
-        <ul className="mt-8 space-y-3">
-          <li className="flex items-start gap-3">
-            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
-              <Check className="h-4 w-4" aria-hidden />
-            </span>
-            <span className="text-sm text-foreground sm:text-base">
-              48 to 72 hour standard UK delivery
-            </span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
-              <Check className="h-4 w-4" aria-hidden />
-            </span>
-            <span className="text-sm text-foreground sm:text-base">
-              UK held stock across the full range
-            </span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
-              <Check className="h-4 w-4" aria-hidden />
-            </span>
-            <span className="text-sm text-foreground sm:text-base">
-              One named account manager per partner
-            </span>
-          </li>
-        </ul>
-        {/* Optional extra CTA */}
-        <div className="mt-8">
-          <a href="#apply" className="btn-cta text-sm">
-            Start your trade application <ArrowRight className="h-4 w-4" aria-hidden />
-          </a>
-        </div>
-      </Reveal>
+    {/* CTA Button */}
+    <div className="mt-8">
+      <a href="#apply" className="btn-cta inline-flex items-center gap-2">
+        Start your trade application →
+      </a>
     </div>
+  </div>
+</div>
   </div>
 </section>
 
         {/* DISTRIBUTION */}
-        <section id="distribution" className="py-20 sm:py-24 bg-offwhite">
+        <section id="distribution" className="bg-plum/90 py-20 text-white sm:py-24">
           <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
             <Reveal>
               <img
@@ -404,17 +371,17 @@ function LandingPage() {
                 height={960}
                 loading="lazy"
                 decoding="async"
-                className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl ring-1 ring-black/5"
+                className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl ring-1 ring-white/10"
               />
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
+              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
                 Distribution
               </p>
-              <h2 className="mt-3 text-3xl font-black text-plum sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                 UK-Held Stock, Backed by JK Foods
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
                 Every SKU is warehoused in the UK by our distribution partner JK Foods and shipped
                 on your named account manager's watch — not a call centre.
               </p>
@@ -429,7 +396,7 @@ function LandingPage() {
                     <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
                       <Check className="h-4 w-4" aria-hidden />
                     </span>
-                    <span className="text-sm text-foreground sm:text-base">{b.text}</span>
+                    <span className="text-sm text-white sm:text-base">{b.text}</span>
                   </li>
                 ))}
               </ul>
@@ -438,13 +405,13 @@ function LandingPage() {
         </section>
 
         {/* TRADE FORM */}
-        <section id="apply" className="relative overflow-hidden bg-gradient-to-br from-plum-dark via-plum to-crimson py-20 sm:py-24">
+        <section id="apply" className="relative overflow-hidden bg-plum/90 py-20 sm:py-24">
           <div className="pointer-events-none absolute inset-0 opacity-30" aria-hidden>
             <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-orange-cta/40 blur-3xl" />
           </div>
           <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-5">
             <div className="lg:col-span-2 lg:pt-4">
-              <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">
+              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
                 Trade Registration
               </p>
               <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-4xl">
@@ -467,11 +434,11 @@ function LandingPage() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="bg-offwhite py-20 sm:py-24">
+        <section id="faq" className="bg-plum/90 py-20 text-white sm:py-24">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <Reveal className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-orange-cta">FAQ</p>
-              <h2 className="mt-3 text-3xl font-black text-plum sm:text-4xl">
+              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">FAQ</p>
+              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                 Trade Questions, Answered Plainly
               </h2>
             </Reveal>
