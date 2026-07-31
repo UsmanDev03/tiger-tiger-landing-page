@@ -138,17 +138,17 @@ function LandingPage() {
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
                 <span className="h-1.5 w-1.5 rounded-full bg-orange-cta" /> UK Trade Only
               </span>
-              <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-5xl">
                 We Offer Full Pan Asian Range{" "}
                 <span className="text-orange-cta">with Hassle Free Trade Supply Across UK</span>
               </h1>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
+              <p className="mt-2 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
                 Authentic Pan-Asian recipes at trade pricing, distributed nationwide across the UK
                 from our own warehouses. Retail, wholesale, restaurants and caterers — one range,
                 every channel.
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-6 flex flex-wrap items-center gap-4">
                 <a href="#apply" className="btn-cta text-base">
                   Apply for a Trade Account <ArrowRight className="h-5 w-5" aria-hidden />
                 </a>
@@ -156,21 +156,43 @@ function LandingPage() {
                   See the Full Range →
                 </a>
               </div>
+            
+<dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:max-w-2xl">
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
+      <Truck className="h-4 w-4" aria-hidden /> Delivery
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">48–72 hour UK</dd>
+  </div>
+  
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
+      <TrendingUp className="h-4 w-4" aria-hidden /> Experience
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">50+ Years UK Trade</dd>
+  </div>
 
-              <dl className="mt-10 grid grid-cols-2 gap-4 sm:max-w-md">
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-                    <Truck className="h-4 w-4" aria-hidden /> Delivery
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold">48–72 hour UK</dd>
-                </div>
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-                    <PackageCheck className="h-4 w-4" aria-hidden /> Orders
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold">Low minimums</dd>
-                </div>
-              </dl>
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
+      <Warehouse className="h-4 w-4" aria-hidden /> Sourcing
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">10+ Countries</dd>
+  </div>
+
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
+      <Boxes className="h-4 w-4" aria-hidden /> Catalogue
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">1600+ Products</dd>
+  </div>
+
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4 col-span-2 sm:col-span-1">
+    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
+      <PackageCheck className="h-4 w-4" aria-hidden /> Orders
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">Low Minimums</dd>
+  </div>
+</dl>
             </div>
 
             <div className="relative">
@@ -179,7 +201,7 @@ function LandingPage() {
                 src={heroImg}
                 alt="Premium Pan-Asian dishes — Thai green curry, stir-fried noodles, jasmine rice with curry paste and coconut milk"
                 width={1400}
-                height={1400}
+                height={1600}
                 fetchPriority="high"
                 decoding="async"
                 className="relative aspect-square w-full rounded-3xl object-contain "
@@ -352,7 +374,7 @@ function LandingPage() {
     {/* CTA Button */}
     <div className="mt-8">
       <a href="#apply" className="btn-cta inline-flex items-center gap-2">
-        Start your trade application →
+        Start your trade →
       </a>
     </div>
   </div>
@@ -361,77 +383,113 @@ function LandingPage() {
 </section>
 
         {/* DISTRIBUTION */}
-        <section id="distribution" className="bg-plum/90 py-20 text-white sm:py-24">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
-            <Reveal>
-              <img
-                src={warehouseImg}
-                alt="Tiger Tiger Foods UK distribution warehouse operated by JK Foods"
-                width={1280}
-                height={960}
-                loading="lazy"
-                decoding="async"
-                className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl ring-1 ring-white/10"
-              />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
-                Distribution
-              </p>
-              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
-                UK-Held Stock, Backed by JK Foods
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
-                Every SKU is warehoused in the UK by our distribution partner JK Foods and shipped
-                on your named account manager's watch — not a call centre.
-              </p>
-              <ul className="mt-8 space-y-3">
-                {[
-                  { icon: Warehouse, text: "UK-warehoused inventory across the full trade range" },
-                  { icon: Truck, text: "48–72 hour nationwide delivery, named-day slots on request" },
-                  { icon: UserCheck, text: "Named account manager, not a shared inbox" },
-                  { icon: Boxes, text: "Mixed pallets and case-level top-ups on repeat orders" },
-                ].map((b) => (
-                  <li key={b.text} className="flex items-start gap-3">
-                    <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
-                      <Check className="h-4 w-4" aria-hidden />
-                    </span>
-                    <span className="text-sm text-white sm:text-base">{b.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
-        </section>
+     <section id="distribution" className="bg-plum/90 py-20 text-white sm:py-24">
+  <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-12 px-4 sm:px-6 lg:grid-cols-2">
+    <Reveal className="h-full flex">
+      <img
+        src={warehouseImg}
+        alt="Tiger Tiger Foods UK distribution warehouse operated by JK Foods"
+        width={1280}
+        height={960}
+        loading="lazy"
+        decoding="async"
+        className="h-full w-full rounded-3xl object-cover shadow-xl ring-1 ring-white/10"
+      />
+    </Reveal>
+    <Reveal delay={0.1}>
+      <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
+        Distribution
+      </p>
+      <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
+        Your Orders, Handled by JK Foods, One of the UK's Biggest Asian Food Distributors
+      </h2>
+      <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+        Every Tiger Tiger line is stocked in the UK by JK Foods, moving nationwide since 1976. Fast dispatch, stock that stays on the shelf, and a named account manager who knows your orders. Not a call centre. Not a shared inbox.
+      </p>
 
-        {/* TRADE FORM */}
-        <section id="apply" className="relative overflow-hidden bg-plum/90 py-20 sm:py-24">
-          <div className="pointer-events-none absolute inset-0 opacity-30" aria-hidden>
-            <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-orange-cta/40 blur-3xl" />
-          </div>
-          <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-5">
-            <div className="lg:col-span-2 lg:pt-4">
-              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
-                Trade Registration
-              </p>
-              <h2 className="mt-3 text-3xl font-black leading-tight text-white sm:text-4xl">
-                Open Your Trade Account Today
-              </h2>
-              <p className="mt-4 text-white/85">
-                One short application. A named account manager gets back to you within one working
-                day with your full price list, MOQs and starter order form.
-              </p>
-              <ul className="mt-6 space-y-2 text-sm text-white/85">
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-orange-cta" aria-hidden /> No sign-up fee, no minimum contract</li>
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-orange-cta" aria-hidden /> Strictly UK trade — not open to consumers</li>
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-orange-cta" aria-hidden /> Full catalogue and price list on approval</li>
-              </ul>
-            </div>
-            <div className="lg:col-span-3">
-              <TradeForm />
-            </div>
-          </div>
-        </section>
+      {/* Trust Bar (Big Figures Row) */}
+      <div className="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/15 bg-white/5 p-4 rounded-2xl">
+        <div className="text-center sm:text-left">
+          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
+            50
+          </span>
+          <span className="mt-1 block text-xs sm:text-sm text-white/90">
+            Years UK Trade
+          </span>
+        </div>
+        <div className="text-center sm:text-left border-x border-white/15 px-2">
+          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
+            1,600+
+          </span>
+          <span className="mt-1 block text-xs sm:text-sm text-white/90">
+            Lines Shipped
+          </span>
+        </div>
+        <div className="text-center sm:text-left pl-2">
+          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
+            10
+          </span>
+          <span className="mt-1 block text-xs sm:text-sm text-white/90">
+            Sourcing Countries
+          </span>
+        </div>
+      </div>
+
+      {/* Original Checkmarks List */}
+      <ul className="mt-8 space-y-3">
+        {[
+          { icon: Warehouse, text: "UK-held stock across the full trade range" },
+          { icon: Truck, text: "Nationwide delivery, scheduled slots on bulk orders" },
+          { icon: UserCheck, text: "Your own account manager on every order" },
+          { icon: Boxes, text: "Mixed pallets and case-level top-ups on repeats" },
+        ].map((b) => (
+          <li key={b.text} className="flex items-start gap-3">
+            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+              <Check className="h-4 w-4" aria-hidden />
+            </span>
+            <span className="text-sm text-white sm:text-base">{b.text}</span>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
+  </div>
+</section>
+
+    <section id="apply" className="relative overflow-hidden bg-plum/90 py-20 sm:py-24">
+  <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-30" aria-hidden>
+    <div className="absolute h-96 w-96 rounded-full bg-orange-cta/40 blur-3xl" />
+  </div>
+  
+  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div>
+      <p className="text-2xl font-bold text-center uppercase tracking-wider text-orange-cta">
+        Trade Registration
+      </p>
+      <h2 className="mt-3 text-3xl text-center font-black leading-tight text-white sm:text-4xl">
+        Open Your Trade Account Today
+      </h2>
+      <p className="mt-4  text-center text-white/85 max-w-7xl">
+        One short application. A named account manager gets back to you within one working
+        day with your full price list, MOQs and starter order form.
+      </p>
+    <ul className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-white/85">
+  <li className="flex items-center gap-2 text-center">
+    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> No sign-up fee, no minimum contract
+  </li>
+  <li className="flex items-center gap-2 text-center">
+    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> Strictly UK trade — not open to consumers
+  </li>
+  <li className="flex items-center gap-2 text-center">
+    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> Full catalogue and price list on approval
+  </li>
+</ul>
+    </div>
+
+    <div className="mt-10">
+      <TradeForm />
+    </div>
+  </div>
+</section>
 
         {/* FAQ */}
         <section id="faq" className="bg-plum/90 py-20 text-white sm:py-24">

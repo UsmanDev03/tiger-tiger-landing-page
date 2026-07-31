@@ -5,7 +5,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "What are your minimum order quantities?",
-    a: "MOQs start from a single mixed pallet across our range, with case-level top-ups on repeat orders. Wholesale and foodservice accounts get bespoke MOQs after approval.",
+    a: "We set minimum order quantities to suit your business, not a one-size rule. Wholesale and foodservice accounts each get their own terms, with case-level top-ups on repeat orders. Your account manager confirms the details once you are approved.",
   },
   {
     q: "How fast is UK delivery?",

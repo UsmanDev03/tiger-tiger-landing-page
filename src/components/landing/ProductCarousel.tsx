@@ -2,14 +2,14 @@
 import { motion } from "motion/react";
 import curry from "@/assets/noodles.jpeg";
 import noodles from "@/assets/rice.png";
-import coconut from "@/assets/frozen.png";
+import coconut from "@/assets/frozen.jpeg";
 import snacks from "@/assets/drinks.jpeg";
 
 const items = [
-  { title: "Curry Pastes & Cooking Sauces", tag: "Signature range", img: curry },
-  { title: "Noodles & Rice", tag: "Wow Chow Range", img: noodles },
-  { title: "Coconut & Kitchen Basics", tag: "Everyday essentials", img: coconut },
-  { title: "Snacks, Drinks & Sides", tag: "Front-of-house", img: snacks },
+  { title: "Noodles", img: curry },
+  { title: "Rice", img: noodles },
+  { title: "Frozen", img: coconut },
+  { title: "Drinks", img: snacks },
 ];
 
 export function ProductCarousel() {
@@ -35,11 +35,8 @@ export function ProductCarousel() {
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
-          <div className="p-5">
-            <p className="text-xs font-semibold uppercase tracking-wider text-orange-cta">
-              {it.tag}
-            </p>
-            <h3 className="mt-1.5 text-lg font-bold text-plum">{it.title}</h3>
+          <div className="p-5 text-center">
+            <h3 className="text-xl sm:text-2xl font-bold text-plum">{it.title}</h3>
           </div>
         </motion.article>
       ))}
