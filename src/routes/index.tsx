@@ -6,7 +6,7 @@ import {
   TrendingUp,
   ChefHat,
   ShieldCheck,
-  Layers,
+  Layers,     
   Check,
   Store,
   UtensilsCrossed,
