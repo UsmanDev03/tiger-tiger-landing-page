@@ -13,12 +13,12 @@ export function TradeForm() {
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
 
   const interests = [
-    { id: "chinese", label: "Chinese", img: chineseImg.src || chineseImg },
-    { id: "thai", label: "Thai", img: thaiImg.src || thaiImg },
-    { id: "vietnamese", label: "Vietnamese", img: vietnameseImg.src || vietnameseImg },
-    { id: "korean", label: "Korean", img: koreanImg.src || koreanImg },
-    { id: "japanese", label: "Japanese", img: japaneseImg.src || japaneseImg },
-    { id: "indian", label: "Indian", img: indianImg.src || indianImg },
+    { id: "chinese", label: "Chinese", img: chineseImg },
+    { id: "thai", label: "Thai", img: thaiImg },
+    { id: "vietnamese", label: "Vietnamese", img: vietnameseImg },
+    { id: "korean", label: "Korean", img: koreanImg },
+    { id: "japanese", label: "Japanese", img: japaneseImg },
+    { id: "indian", label: "Indian", img: indianImg },
   ];
 
   const toggleInterest = (id: string) => {
