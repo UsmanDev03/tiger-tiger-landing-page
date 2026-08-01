@@ -5,8 +5,8 @@ import chineseImg from "@/assets/chinese.png";
 import thaiImg from "@/assets/thai.png";
 import vietnameseImg from "@/assets/vietnamese.png";
 import koreanImg from "@/assets/korean.png";
-import japaneseImg from "@/assets/japanese.png";
-import indianImg from "@/assets/indian.png";
+import japaneseImg from "@/assets/Japanese.png";
+import indianImg from "@/assets/Indian.png";
 
 export function TradeForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
