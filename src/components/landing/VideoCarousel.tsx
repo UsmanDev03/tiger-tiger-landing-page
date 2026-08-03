@@ -47,7 +47,7 @@ export default function StoriesCarousel() {
 
   return (
     <div className="relative w-full max-w-full mx-auto px-4 py-8 overflow-hidden bg-plum/90">
-      <h3 className="mb-6 text-2xl font-black uppercase tracking-wider text-white text-center">
+      <h3 className="mb-8 text-2xl font-black uppercase tracking-wider text-white text-center">
         what people are saying
       </h3>
 
