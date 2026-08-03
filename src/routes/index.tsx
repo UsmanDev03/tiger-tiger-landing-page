@@ -13,6 +13,7 @@ import {
   Warehouse,
   UserCheck,
   Boxes,
+  Tag, BadgePercent
 } from "lucide-react";
 import heroImg from "@/assets/tt-landing-hero.png";
 import warehouseImg from "@/assets/warehouse.jpeg";
@@ -22,6 +23,7 @@ import { ProductCarousel } from "@/components/landing/ProductCarousel";
 import { Reveal } from "@/components/landing/Reveal";
 import { MobileNav } from "@/components/landing/MobileNav";
 import videoSrc from "@/assets/video.mp4";
+import VideoCarousel from "@/components/landing/VideoCarousel";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -156,42 +158,56 @@ function LandingPage() {
                   See the Full Range →
                 </a>
               </div>
-            
-<dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:max-w-2xl">
+            <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:max-w-3xl">
+  
+  {/* Card 1: Delivery */}
   <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-      <Truck className="h-4 w-4" aria-hidden /> Delivery
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Truck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Delivery
     </dt>
-    <dd className="mt-1 text-lg font-bold text-white">48–72 hour UK</dd>
+    <dd className="mt-1 text-lg font-bold text-white">48–72 hour <br/> UK</dd>
   </div>
   
+  {/* Card 2: Experience */}
   <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-      <TrendingUp className="h-4 w-4" aria-hidden /> Experience
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <TrendingUp className="h-3.5 w-3.5 shrink-0" aria-hidden /> Experience
     </dt>
     <dd className="mt-1 text-lg font-bold text-white">50+ Years UK Trade</dd>
   </div>
 
+  {/* Card 3: Competitive Pricing */}
   <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-      <Warehouse className="h-4 w-4" aria-hidden /> Sourcing
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Tag className="h-3.5 w-3.5 shrink-0" aria-hidden /> Competitive Pricing
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">Best Market Rates</dd>
+  </div>
+
+  {/* Card 4: Sourcing */}
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Warehouse className="h-3.5 w-3.5 shrink-0" aria-hidden /> Sourcing
     </dt>
     <dd className="mt-1 text-lg font-bold text-white">10+ Countries</dd>
   </div>
 
+  {/* Card 5: Catalogue */}
   <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-      <Boxes className="h-4 w-4" aria-hidden /> Catalogue
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Boxes className="h-3.5 w-3.5 shrink-0" aria-hidden /> Catalogue
     </dt>
     <dd className="mt-1 text-lg font-bold text-white">1600+ Products</dd>
   </div>
 
+  {/* Card 6: Orders */}
   <div className="rounded-xl border border-white/15 bg-white/5 p-4 col-span-2 sm:col-span-1">
-    <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange-cta">
-      <PackageCheck className="h-4 w-4" aria-hidden /> Orders
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <PackageCheck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Orders
     </dt>
     <dd className="mt-1 text-lg font-bold text-white">Low Minimums</dd>
   </div>
+
 </dl>
             </div>
 
@@ -239,6 +255,81 @@ function LandingPage() {
             </div>
           </div>
         </section>
+        
+        {/* DISTRIBUTION */}
+     <section id="distribution" className="bg-plum/90 py-20 text-white sm:py-24">
+  <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-12 px-4 sm:px-6 lg:grid-cols-2">
+    <Reveal className="h-full flex">
+      <img
+        src={warehouseImg}
+        alt="Tiger Tiger Foods UK distribution warehouse operated by JK Foods"
+        width={1280}
+        height={960}
+        loading="lazy"
+        decoding="async"
+        className="h-full w-full rounded-3xl object-cover shadow-xl ring-1 ring-white/10"
+      />
+    </Reveal>
+    <Reveal delay={0.1}>
+      <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
+        Distribution
+      </p>
+      <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
+        Your Orders, Handled by JK Foods, One of the UK's Biggest Asian Food Distributors
+      </h2>
+      <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+        Every Tiger Tiger line is stocked in the UK by JK Foods, moving nationwide since 1976. Fast dispatch, stock that stays on the shelf, and a named account manager who knows your orders. Not a call centre. Not a shared inbox.
+      </p>
+
+      {/* Trust Bar (Big Figures Row) */}
+      <div className="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/15 bg-white/5 p-4 rounded-2xl">
+        <div className="text-center sm:text-left">
+          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
+            50
+          </span>
+          <span className="mt-1 block text-xs sm:text-sm text-white/90">
+            Years UK Trade
+          </span>
+        </div>
+        <div className="text-center sm:text-left border-x border-white/15 px-2">
+          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
+            1,600+
+          </span>
+          <span className="mt-1 block text-xs sm:text-sm text-white/90">
+            Lines Shipped
+          </span>
+        </div>
+        <div className="text-center sm:text-left pl-2">
+          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
+            10
+          </span>
+          <span className="mt-1 block text-xs sm:text-sm text-white/90">
+            Sourcing Countries
+          </span>
+        </div>
+      </div>
+
+      {/* Original Checkmarks List */}
+      <ul className="mt-8 space-y-3">
+        {[
+          { icon: Warehouse, text: "UK held stock across the full trade range" },
+          { icon: Truck, text: "Nationwide delivery, scheduled slots on bulk orders" },
+          { icon: UserCheck, text: "Your own account manager on every order" },
+          { icon: Boxes, text: "Mixed pallets and case level top ups on repeats" },
+        ].map((b) => (
+          <li key={b.text} className="flex items-start gap-3">
+            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
+              <Check className="h-4 w-4" aria-hidden />
+            </span>
+            <span className="text-sm text-white sm:text-base">{b.text}</span>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
+  </div>
+</section>
+
+<VideoCarousel />
 
         {/* PRODUCT RANGE */}
         <section id="range" className="bg-plum/90 py-20 text-white sm:py-24">
@@ -249,7 +340,7 @@ function LandingPage() {
                   The Range
                 </p>
                 <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
-                  A Range Wide Enough to Cover the Whole Menu
+                  A  Range Wide Enough to Cover the Whole Menu
                 </h2>
               </div>
               <a href="#apply" className="btn-ghost-plum text-sm">
@@ -382,78 +473,6 @@ function LandingPage() {
   </div>
 </section>
 
-        {/* DISTRIBUTION */}
-     <section id="distribution" className="bg-plum/90 py-20 text-white sm:py-24">
-  <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-12 px-4 sm:px-6 lg:grid-cols-2">
-    <Reveal className="h-full flex">
-      <img
-        src={warehouseImg}
-        alt="Tiger Tiger Foods UK distribution warehouse operated by JK Foods"
-        width={1280}
-        height={960}
-        loading="lazy"
-        decoding="async"
-        className="h-full w-full rounded-3xl object-cover shadow-xl ring-1 ring-white/10"
-      />
-    </Reveal>
-    <Reveal delay={0.1}>
-      <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
-        Distribution
-      </p>
-      <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
-        Your Orders, Handled by JK Foods, One of the UK's Biggest Asian Food Distributors
-      </h2>
-      <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
-        Every Tiger Tiger line is stocked in the UK by JK Foods, moving nationwide since 1976. Fast dispatch, stock that stays on the shelf, and a named account manager who knows your orders. Not a call centre. Not a shared inbox.
-      </p>
-
-      {/* Trust Bar (Big Figures Row) */}
-      <div className="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/15 bg-white/5 p-4 rounded-2xl">
-        <div className="text-center sm:text-left">
-          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
-            50
-          </span>
-          <span className="mt-1 block text-xs sm:text-sm text-white/90">
-            Years UK Trade
-          </span>
-        </div>
-        <div className="text-center sm:text-left border-x border-white/15 px-2">
-          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
-            1,600+
-          </span>
-          <span className="mt-1 block text-xs sm:text-sm text-white/90">
-            Lines Shipped
-          </span>
-        </div>
-        <div className="text-center sm:text-left pl-2">
-          <span className="block text-3xl sm:text-4xl font-black text-orange-cta">
-            10
-          </span>
-          <span className="mt-1 block text-xs sm:text-sm text-white/90">
-            Sourcing Countries
-          </span>
-        </div>
-      </div>
-
-      {/* Original Checkmarks List */}
-      <ul className="mt-8 space-y-3">
-        {[
-          { icon: Warehouse, text: "UK held stock across the full trade range" },
-          { icon: Truck, text: "Nationwide delivery, scheduled slots on bulk orders" },
-          { icon: UserCheck, text: "Your own account manager on every order" },
-          { icon: Boxes, text: "Mixed pallets and case level top ups on repeats" },
-        ].map((b) => (
-          <li key={b.text} className="flex items-start gap-3">
-            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
-              <Check className="h-4 w-4" aria-hidden />
-            </span>
-            <span className="text-sm text-white sm:text-base">{b.text}</span>
-          </li>
-        ))}
-      </ul>
-    </Reveal>
-  </div>
-</section>
 
     <section id="apply" className="relative overflow-hidden bg-plum/90 py-20 sm:py-24">
   <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-30" aria-hidden>
