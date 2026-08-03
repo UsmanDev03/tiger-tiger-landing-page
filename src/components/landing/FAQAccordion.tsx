@@ -5,15 +5,15 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "What are your minimum order quantities?",
-    a: "We set minimum order quantities to suit your business, not a one-size rule. Wholesale and foodservice accounts each get their own terms, with case-level top-ups on repeat orders. Your account manager confirms the details once you are approved.",
+    a: "We set minimum order quantities to suit your business, not a one-size rule. Wholesale and foodservice accounts each get their own terms, with case level top ups on repeat orders. Your account manager confirms the details once you are approved.",
   },
   {
     q: "How fast is UK delivery?",
-    a: "Standard 48–72 hour nationwide delivery from UK-held stock via our JK Foods distribution network. Named-day slots available for account holders.",
+    a: "Standard 48–72 hour nationwide delivery from UK-held stock via our JK Foods distribution network. Named day slots available for account holders.",
   },
   {
     q: "How does trade pricing work?",
-    a: "Once your trade application is approved, you receive a full price list scaled to your channel — retail, wholesale, or foodservice — with volume tiers.",
+    a: "Once your trade application is approved, you receive a full price list scaled to your channel  retail, wholesale, or foodservice  with volume tiers.",
   },
   {
     q: "How long does the application process take?",

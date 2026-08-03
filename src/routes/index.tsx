@@ -72,19 +72,19 @@ const values = [
     icon: TrendingUp,
     title: "Margins Worth the Shelf Space",
     body:
-      "Trade pricing engineered for real-world channel margins — priced to move at retail, priced to plate at foodservice.",
+      "Trade pricing engineered for real-world channel margins priced to move at retail, priced to plate at foodservice.",
   },
   {
     icon: ChefHat,
     title: "Proper Recipes, Full Strength",
     body:
-      "Authentic Pan-Asian formulations built by our development kitchen — no watered-down flavour, no apologies.",
+      "Authentic Pan-Asian formulations built by our development kitchen  no watered-down flavour, no apologies.",
   },
   {
     icon: ShieldCheck,
     title: "Supply You Can Plan Around",
     body:
-      "UK-held stock and named account managers mean you forecast once and get what you ordered, on time.",
+      "UK held stock and named account managers mean you forecast once and get what you ordered, on time.",
   },
   {
     icon: Layers,
@@ -144,7 +144,7 @@ function LandingPage() {
               </h1>
               <p className="mt-2 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
                 Authentic Pan-Asian recipes at trade pricing, distributed nationwide across the UK
-                from our own warehouses. Retail, wholesale, restaurants and caterers — one range,
+                from our own warehouses. Retail, wholesale, restaurants and caterers  one range,
                 every channel.
               </p>
 
@@ -280,7 +280,7 @@ function LandingPage() {
                   eyebrow: "Wholesale",
                   title: "Retail, Cash & Carry, Convenience",
                   body:
-                    "Rate-of-sale winners at every price point — jars, pouches and pack sizes buyers reorder without prompting.",
+                    "Rate of sale winners at every price point jars, pouches and pack sizes buyers reorder without prompting.",
                   cta: "Open a Wholesale Account",
                 },
                 {
@@ -288,7 +288,7 @@ function LandingPage() {
                   eyebrow: "Foodservice",
                   title: "Restaurants, Takeaways, Caterers",
                   body:
-                    "Kitchen-grade tubs, consistent recipes and stable pricing your development chef can actually build a menu on.",
+                    "Kitchen grade tubs, consistent recipes and stable pricing your development chef can actually build a menu on.",
                   cta: "Open a Foodservice Account",
                 },
               ].map((s, i) => (
@@ -438,10 +438,10 @@ function LandingPage() {
       {/* Original Checkmarks List */}
       <ul className="mt-8 space-y-3">
         {[
-          { icon: Warehouse, text: "UK-held stock across the full trade range" },
+          { icon: Warehouse, text: "UK held stock across the full trade range" },
           { icon: Truck, text: "Nationwide delivery, scheduled slots on bulk orders" },
           { icon: UserCheck, text: "Your own account manager on every order" },
-          { icon: Boxes, text: "Mixed pallets and case-level top-ups on repeats" },
+          { icon: Boxes, text: "Mixed pallets and case level top ups on repeats" },
         ].map((b) => (
           <li key={b.text} className="flex items-start gap-3">
             <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange-cta text-white">
@@ -474,10 +474,10 @@ function LandingPage() {
       </p>
     <ul className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-white/85">
   <li className="flex items-center gap-2 text-center">
-    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> No sign-up fee, no minimum contract
+    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> No sign up fee, no minimum contract
   </li>
   <li className="flex items-center gap-2 text-center">
-    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> Strictly UK trade — not open to consumers
+    <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> Strictly UK trade  not open to consumers
   </li>
   <li className="flex items-center gap-2 text-center">
     <Check className="h-4 w-4 shrink-0 text-orange-cta" aria-hidden /> Full catalogue and price list on approval
