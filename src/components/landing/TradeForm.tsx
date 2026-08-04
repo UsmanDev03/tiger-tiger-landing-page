@@ -11,6 +11,7 @@ import indianImg from "@/assets/Indian.png";
 export function TradeForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+  const [errorMsg, setErrorMsg] = useState<string>("");
 
   const interests = [
     { id: "chinese", label: "Chinese", img: chineseImg },
@@ -26,12 +27,105 @@ export function TradeForm() {
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
-
+// ==================== MAIN HANDLE SUBMIT (register only — no cart on this form) ====================
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    const getVal = (name: string) => (fd.get(name) as string | null)?.trim() || "";
+
+    const contact_name = getVal("contact");
+    const business_name = getVal("business");
+    const company_registration = getVal("companyRegistration");
+    const company_vat = getVal("vatNumber");
+    const position_in_business = getVal("position");
+    const email = getVal("email");
+    const phone = getVal("phone");
+    const password = getVal("password");
+    const streetAddress = getVal("streetAddress");
+    const address2 = getVal("address2");
+    const country = getVal("country");
+    const stateVal = getVal("state");
+    const city = getVal("city");
+    const postCode = getVal("postCode");
+    const businessType = getVal("businessType");
+
+    // Basic validation (mirrors register form's rules)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (
+      !contact_name ||
+      !business_name ||
+      !company_registration ||
+      !position_in_business ||
+      !streetAddress ||
+      !country ||
+      !city ||
+      !postCode ||
+      !email ||
+      !phone ||
+      !password
+    ) {
+      setErrorMsg("Please fill all required fields.");
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      setErrorMsg("Invalid email address.");
+      return;
+    }
+    if (phone.length < 10) {
+      setErrorMsg("Phone number must be at least 10 digits.");
+      return;
+    }
+    if (password.length < 6) {
+      setErrorMsg("Password must be at least 6 characters.");
+      return;
+    }
+
     setStatus("loading");
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("done");
+
+    try {
+      const registerPayload = {
+        contact_name,
+        business_name,
+        company_registration,
+        company_vat,
+        position_in_business,
+        email,
+        phone,
+        password,
+        address: streetAddress,
+        address_2: address2,
+        city,
+        state: stateVal,
+        zip_code: postCode,
+        country,
+        type_business: businessType,
+        interest: selectedInterests.join(", "),
+      };
+
+      const registerRes = await fetch("https://backend.tigertigerfoods.com/api/sign-up", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(registerPayload),
+      });
+
+      const registerData = await registerRes.json();
+      console.log("Register Response:", registerData);
+
+      if (registerData.success === true) {
+        setStatus("done");
+      } else {
+        setErrorMsg(registerData.message || "Registration failed. Please try again.");
+        setStatus("idle");
+      }
+    } catch (err) {
+      console.error("Submit error:", err);
+      setErrorMsg("Network error. Please check your connection and try again.");
+      setStatus("idle");
+    }
   }
 
   if (status === "done") {
@@ -58,14 +152,20 @@ export function TradeForm() {
         <span className="inline-flex items-center gap-1.5"><FileCheck2 className="h-4 w-4 text-orange-cta" aria-hidden /> Full price list sent on approval</span>
       </div>
 
+      {errorMsg && (
+        <div className="mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+          {errorMsg}
+        </div>
+      )}
+
+      {/* Billing Information */}
       {/* Billing Information */}
       <h3 className="mb-5 text-2xl font-bold text-plum">Billing Information</h3>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Contact Name" name="contact" required />
         <Field label="Business Name" name="business" required />
-        <div className="sm:col-span-2">
-          <Field label="Company Registration Number" name="companyRegistration" required />
-        </div>
+        <Field label="Company Registration Number" name="companyRegistration" required />
+        <Field label="Password" name="password" type="password" required />
         <Field label="Company VAT Number" name="vatNumber" />
         <Field label="Position in Business" name="position" required />
         <Field label="Email" name="email" type="email" required />
