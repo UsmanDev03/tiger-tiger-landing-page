@@ -106,29 +106,29 @@ function LandingPage() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-white/15 bg-white backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <a href="#">
-            <img src="/logo.avif" alt="Tiger Tiger" className="h-12 w-auto" />
-          </a>
+      <header className="md:sticky top-0 z-40 border-b border-white/15 bg-white backdrop-blur">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+    <a href="#">
+      <img src="/logo.avif" alt="Tiger Tiger" className="h-12 w-auto" />
+    </a>
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-            <a href="#why" className="text-sm font-semibold text-plum hover:text-orange-cta">Why Stock Us</a>
-            <a href="#range" className="text-sm font-semibold text-plum hover:text-orange-cta">Product Range</a>
-            <a href="#sectors" className="text-sm font-semibold text-plum hover:text-orange-cta">Sectors</a>
-            <a href="#video-intro" className="text-sm font-semibol text-plum  hover:text-orange-cta">Our Story</a>
-            <a href="#distribution" className="text-sm font-semibold text-plum  hover:text-orange-cta">Distribution</a>
-            <a href="#faq" className="text-sm font-semibold text-white hover:text-orange-cta">FAQ</a>
-          </nav>
+    <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+      <a href="#why" className="text-sm font-semibold text-plum hover:text-orange-cta">Why Stock Us</a>
+      <a href="#range" className="text-sm font-semibold text-plum hover:text-orange-cta">Product Range</a>
+      <a href="#sectors" className="text-sm font-semibold text-plum hover:text-orange-cta">Sectors</a>
+      <a href="#video-intro" className="text-sm font-semibold text-plum hover:text-orange-cta">Our Story</a>
+      <a href="#distribution" className="text-sm font-semibold text-plum hover:text-orange-cta">Distribution</a>
+      <a href="#faq" className="text-sm font-semibold text-white hover:text-orange-cta">FAQ</a>
+    </nav>
 
-          <div className="flex items-center gap-2">
-            <a href="#apply" className="btn-cta hidden text-sm md:inline-flex">
-              Apply for a Trade Account
-            </a>
-            <MobileNav />
-          </div>
-        </div>
-      </header>
+    <div className="flex items-center gap-2">
+      <a href="#apply" className="btn-cta hidden text-sm md:inline-flex">
+        Apply for a Trade Account
+      </a>
+      <MobileNav />
+    </div>
+  </div>
+</header>
 
       <main>
      {/* HERO */}
@@ -153,59 +153,55 @@ function LandingPage() {
               <a href="#apply" className="btn-cta text-base">
                 Apply for a Trade Account <ArrowRight className="h-5 w-5" aria-hidden />
               </a>
-              <a
-                href="#range"
-                className="text-sm font-semibold text-white/90 underline-offset-4 hover:text-orange-cta hover:underline"
-              >
-                See the Full Range →
-              </a>
+             
             </div>
 
-            <dl className="mt-6 grid grid-cols-2 gap-4 sm:max-w-3xl sm:grid-cols-3">
-              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                  <Truck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Delivery
-                </dt>
-                <dd className="mt-1 text-lg font-bold text-white">
-                  48–72 hour <br /> UK
-                </dd>
-              </div>
+          <dl className="mt-6 grid grid-cols-2 gap-4 sm:max-w-3xl lg:grid-cols-3">
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Truck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Delivery
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">
+      48–72 hour <br /> UK
+    </dd>
+  </div>
 
-              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                  <TrendingUp className="h-3.5 w-3.5 shrink-0" aria-hidden /> Experience
-                </dt>
-                <dd className="mt-1 text-lg font-bold text-white">50+ Years UK Trade</dd>
-              </div>
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <TrendingUp className="h-3.5 w-3.5 shrink-0" aria-hidden /> Experience
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">50+ Years UK Trade</dd>
+  </div>
 
-              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                  <Tag className="h-3.5 w-3.5 shrink-0" aria-hidden /> Competitive Pricing
-                </dt>
-                <dd className="mt-1 text-lg font-bold text-white">Best Market Rates</dd>
-              </div>
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Tag className="h-3.5 w-3.5 shrink-0" aria-hidden /> Competitive Pricing
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">Best Market Rates</dd>
+  </div>
 
-              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                  <Warehouse className="h-3.5 w-3.5 shrink-0" aria-hidden /> Sourcing
-                </dt>
-                <dd className="mt-1 text-lg font-bold text-white">10+ Countries</dd>
-              </div>
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Warehouse className="h-3.5 w-3.5 shrink-0" aria-hidden /> Sourcing
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">10+ Countries</dd>
+  </div>
 
-              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                  <Boxes className="h-3.5 w-3.5 shrink-0" aria-hidden /> Catalogue
-                </dt>
-                <dd className="mt-1 text-lg font-bold text-white">1600+ Products</dd>
-              </div>
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <Boxes className="h-3.5 w-3.5 shrink-0" aria-hidden /> Catalogue
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">1600+ Products</dd>
+  </div>
 
-              <div className="rounded-xl border border-white/15 bg-white/5 p-4 col-span-2 sm:col-span-1">
-                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                  <PackageCheck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Orders
-                </dt>
-                <dd className="mt-1 text-lg font-bold text-white">Low Minimums</dd>
-              </div>
-            </dl>
+  {/* Yahan se col-span-2 hata diya hai taake yeh mobile par bhi baaki boxes ki tarah barabar fit ho */}
+  <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+    <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+      <PackageCheck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Orders
+    </dt>
+    <dd className="mt-1 text-lg font-bold text-white">Low Minimums</dd>
+  </div>
+</dl>
           </div>
 
           <div className="relative">
@@ -361,7 +357,7 @@ function LandingPage() {
                   title: "Retail, Cash & Carry, Convenience",
                   body:
                     "Rate of sale winners at every price point jars, pouches and pack sizes buyers reorder without prompting.",
-                  cta: "Open a Wholesale Account",
+                
                 },
                 {
                   icon: UtensilsCrossed,
@@ -369,7 +365,7 @@ function LandingPage() {
                   title: "Restaurants, Takeaways, Caterers",
                   body:
                     "Kitchen grade tubs, consistent recipes and stable pricing your development chef can actually build a menu on.",
-                  cta: "Open a Foodservice Account",
+                
                 },
               ].map((s, i) => (
                 <Reveal key={s.title} delay={i * 0.1}>
@@ -456,11 +452,7 @@ function LandingPage() {
                   </li>
                 </ul>
 
-                <div className="mt-8">
-                  <a href="#apply" className="btn-cta inline-flex items-center gap-2">
-                    Start your trade →
-                  </a>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -527,17 +519,7 @@ function LandingPage() {
           <p className="mx-auto mt-6 max-w-xl text-sm">
             Tiger Tiger Foods trade programme. UK distribution supported by JK Foods.
           </p>
-          <div className="mt-4 text-xs text-white/50">
-            © {new Date().getFullYear()} Tiger Tiger Foods.{" "}
-            <a
-              href="https://www.tigertigerfoods.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-orange-cta hover:underline"
-            >
-              Official Website ↗
-            </a>
-          </div>
+          
         </div>
       </footer>
     </div>
