@@ -94,6 +94,10 @@
 
 @utility btn-cta {
   display: inline-flex;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: auto;
+  }
   align-items: center;
   justify-content: center;
   gap: 0.5rem;

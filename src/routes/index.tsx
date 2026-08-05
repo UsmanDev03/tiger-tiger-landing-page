@@ -22,6 +22,7 @@ import { MobileNav } from "@/components/landing/MobileNav";
 import { ProductCarousel } from "@/components/landing/ProductCarousel";
 import { Reveal } from "@/components/landing/Reveal";
 import { TradeForm } from "@/components/landing/TradeForm";
+import SectorsSlider from "@/components/landing/ScrollableCards";
 import VideoCarousel from "@/components/landing/VideoCarousel";
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,7 +107,7 @@ function LandingPage() {
       </div>
 
       {/* Header */}
-      <header className="md:sticky top-0 z-40 border-b border-white/15 bg-white backdrop-blur">
+      <header className="md:sticky md:top-0 md:z-40 border-b border-white/15 bg-white backdrop-blur">
   <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
     <a href="#">
       <img src="/logo.avif" alt="Tiger Tiger" className="h-12 w-auto" />
@@ -149,14 +150,19 @@ function LandingPage() {
               every channel.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <a href="#apply" className="btn-cta text-base">
-                Apply for a Trade Account <ArrowRight className="h-5 w-5" aria-hidden />
-              </a>
-             
-            </div>
+            <div className="mt-6 hidden md:flex flex-wrap items-center gap-4">
+  <a href="#apply" className="btn-cta text-base">
+    Apply for a Trade Account <ArrowRight className="h-5 w-5" aria-hidden />
+  </a>
+  <a
+    href="#range"
+    className="text-sm font-semibold text-white/90 underline-offset-4 hover:text-orange-cta hover:underline"
+  >
+    See the Full Range →
+  </a>
+</div>
 
-          <dl className="mt-6 grid grid-cols-2 gap-4 sm:max-w-3xl lg:grid-cols-3">
+         <dl className="mt-6 grid grid-cols-2 gap-4 sm:max-w-3xl lg:grid-cols-3">
   <div className="rounded-xl border border-white/15 bg-white/5 p-4">
     <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
       <Truck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Delivery
@@ -340,56 +346,19 @@ function LandingPage() {
         </section>
 
         {/* SECTORS */}
-        <section id="sectors" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <Reveal className="mx-auto max-w-2xl text-center">
-              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">Sectors</p>
-              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
-                Built for Your Side of the Trade
-              </h2>
-            </Reveal>
+     <section id="sectors" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">Sectors</p>
+          <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
+            Built for Your Side of the Trade
+          </h2>
+        </Reveal>
 
-            <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {[
-                {
-                  icon: Store,
-                  eyebrow: "Wholesale",
-                  title: "Retail, Cash & Carry, Convenience",
-                  body:
-                    "Rate of sale winners at every price point jars, pouches and pack sizes buyers reorder without prompting.",
-                
-                },
-                {
-                  icon: UtensilsCrossed,
-                  eyebrow: "Foodservice",
-                  title: "Restaurants, Takeaways, Caterers",
-                  body:
-                    "Kitchen grade tubs, consistent recipes and stable pricing your development chef can actually build a menu on.",
-                
-                },
-              ].map((s, i) => (
-                <Reveal key={s.title} delay={i * 0.1}>
-                  <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/10 p-8 text-white shadow-xl ring-1 ring-white/10 backdrop-blur sm:p-10">
-                    <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full  blur-3xl transition group-hover:bg-orange-cta/30" aria-hidden />
-                    <div className="relative">
-                      <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-orange-cta">
-                        <s.icon className="h-7 w-7" aria-hidden />
-                      </div>
-                      <p className="mt-6 text-xs font-bold uppercase tracking-wider text-orange-cta">
-                        {s.eyebrow}
-                      </p>
-                      <h3 className="mt-2 text-2xl font-black sm:text-3xl">{s.title}</h3>
-                      <p className="mt-4 text-white/80">{s.body}</p>
-                      <a href="#apply" className="btn-cta mt-8 self-start">
-                        {s.cta} <ArrowRight className="h-4 w-4" aria-hidden />
-                      </a>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Yahan hum ne slider component call kar diya hai */}
+        <SectorsSlider />
+      </div>
+    </section>
         {/* VIDEO INTRO SECTION */}
         <section id="video-intro" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -452,7 +421,11 @@ function LandingPage() {
                   </li>
                 </ul>
 
-              
+                <div className="mt-8">
+                  <a href="#apply" className="btn-cta inline-flex items-center gap-2">
+                    Start your trade →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -519,7 +492,7 @@ function LandingPage() {
           <p className="mx-auto mt-6 max-w-xl text-sm">
             Tiger Tiger Foods trade programme. UK distribution supported by JK Foods.
           </p>
-          
+         
         </div>
       </footer>
     </div>
