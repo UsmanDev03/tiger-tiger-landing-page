@@ -131,130 +131,129 @@ function LandingPage() {
       </header>
 
       <main>
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-plum/90 text-white">
-          <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-orange-cta/20 blur-3xl" aria-hidden />
-          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-24">
-            <div className="flex flex-col justify-center">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
-                <span className="h-1.5 w-1.5 rounded-full bg-orange-cta" /> UK Trade Only
-              </span>
-              <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-5xl">
-                We Offer Full Pan Asian Range{" "}
-                <span className="text-orange-cta">with Hassle Free Trade Supply Across UK</span>
-              </h1>
-              <p className="mt-2 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-                Authentic Pan-Asian recipes at trade pricing, distributed nationwide across the UK
-                from our own warehouses. Retail, wholesale, restaurants and caterers  one range,
-                every channel.
-              </p>
+     {/* HERO */}
+      <section className="relative overflow-hidden bg-plum/90 text-white">
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-orange-cta/20 blur-3xl" aria-hidden />
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 pt-16 pb-10 sm:px-6 sm:pt-24 sm:pb-12 lg:grid-cols-2 lg:gap-16 lg:pt-24 lg:pb-12">
+          <div className="flex flex-col justify-center">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+              <span className="h-1.5 w-1.5 rounded-full bg-orange-cta" /> UK Trade Only
+            </span>
+            <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-5xl">
+              We Offer Full Pan Asian Range{" "}
+              <span className="text-orange-cta">with Hassle Free Trade Supply Across UK</span>
+            </h1>
+            <p className="mt-2 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
+              Authentic Pan-Asian recipes at trade pricing, distributed nationwide across the UK
+              from our own warehouses. Retail, wholesale, restaurants and caterers  one range,
+              every channel.
+            </p>
 
-              <div className="mt-6 flex flex-wrap items-center gap-4">
-                <a href="#apply" className="btn-cta text-base">
-                  Apply for a Trade Account <ArrowRight className="h-5 w-5" aria-hidden />
-                </a>
-                <a
-                  href="#range"
-                  className="text-sm font-semibold text-white/90 underline-offset-4 hover:text-orange-cta hover:underline"
-                >
-                  See the Full Range →
-                </a>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <a href="#apply" className="btn-cta text-base">
+                Apply for a Trade Account <ArrowRight className="h-5 w-5" aria-hidden />
+              </a>
+              <a
+                href="#range"
+                className="text-sm font-semibold text-white/90 underline-offset-4 hover:text-orange-cta hover:underline"
+              >
+                See the Full Range →
+              </a>
+            </div>
+
+            <dl className="mt-6 grid grid-cols-2 gap-4 sm:max-w-3xl sm:grid-cols-3">
+              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+                  <Truck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Delivery
+                </dt>
+                <dd className="mt-1 text-lg font-bold text-white">
+                  48–72 hour <br /> UK
+                </dd>
               </div>
 
-              <dl className="mt-6 grid grid-cols-2 gap-4 sm:max-w-3xl sm:grid-cols-3">
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                    <Truck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Delivery
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold text-white">
-                    48–72 hour <br /> UK
-                  </dd>
-                </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+                  <TrendingUp className="h-3.5 w-3.5 shrink-0" aria-hidden /> Experience
+                </dt>
+                <dd className="mt-1 text-lg font-bold text-white">50+ Years UK Trade</dd>
+              </div>
 
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                    <TrendingUp className="h-3.5 w-3.5 shrink-0" aria-hidden /> Experience
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold text-white">50+ Years UK Trade</dd>
-                </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+                  <Tag className="h-3.5 w-3.5 shrink-0" aria-hidden /> Competitive Pricing
+                </dt>
+                <dd className="mt-1 text-lg font-bold text-white">Best Market Rates</dd>
+              </div>
 
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                    <Tag className="h-3.5 w-3.5 shrink-0" aria-hidden /> Competitive Pricing
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold text-white">Best Market Rates</dd>
-                </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+                  <Warehouse className="h-3.5 w-3.5 shrink-0" aria-hidden /> Sourcing
+                </dt>
+                <dd className="mt-1 text-lg font-bold text-white">10+ Countries</dd>
+              </div>
 
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                    <Warehouse className="h-3.5 w-3.5 shrink-0" aria-hidden /> Sourcing
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold text-white">10+ Countries</dd>
-                </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-4">
+                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+                  <Boxes className="h-3.5 w-3.5 shrink-0" aria-hidden /> Catalogue
+                </dt>
+                <dd className="mt-1 text-lg font-bold text-white">1600+ Products</dd>
+              </div>
 
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-                  <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                    <Boxes className="h-3.5 w-3.5 shrink-0" aria-hidden /> Catalogue
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold text-white">1600+ Products</dd>
-                </div>
-
-                <div className="rounded-xl border border-white/15 bg-white/5 p-4 col-span-2 sm:col-span-1">
-                  <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
-                    <PackageCheck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Orders
-                  </dt>
-                  <dd className="mt-1 text-lg font-bold text-white">Low Minimums</dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="relative">
-              <div className="absolute inset-0 -rotate-2 rounded-3xl bg-orange-cta/30 blur-2xl" aria-hidden />
-              <img
-                src={heroImg}
-                alt="Premium Pan-Asian dishes — Thai green curry, stir-fried noodles, jasmine rice with curry paste and coconut milk"
-                width={1400}
-                height={1600}
-                fetchPriority="high"
-                decoding="async"
-                className="relative aspect-square w-full rounded-3xl object-contain "
-              />
-            </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-4 col-span-2 sm:col-span-1">
+                <dt className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-orange-cta">
+                  <PackageCheck className="h-3.5 w-3.5 shrink-0" aria-hidden /> Orders
+                </dt>
+                <dd className="mt-1 text-lg font-bold text-white">Low Minimums</dd>
+              </div>
+            </dl>
           </div>
-        </section>
 
-        {/* VALUE PROPS */}
-        <section id="why" className="bg-plum/90 py-20 text-white sm:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <Reveal className="mx-auto max-w-2xl text-center">
-              <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
-                Why buyers keep us in the range
-              </p>
-              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
-                Four Reasons Buyers Keep Us on the Order Sheet
-              </h2>
-            </Reveal>
-
-            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {values.map((v, i) => (
-                <Reveal key={v.title} delay={i * 0.08}>
-                  <article className="group h-full rounded-2xl border-t-4 border-orange-cta bg-white/10 p-8 shadow-sm ring-1 ring-white/10 backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition group-hover:bg-orange-cta group-hover:text-white">
-                      <v.icon className="h-6 w-6" aria-hidden />
-                    </div>
-                    <h3 className="mt-5 text-xl font-bold text-white">{v.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/80 sm:text-base">
-                      {v.body}
-                    </p>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
+          <div className="relative">
+            <div className="absolute inset-0 -rotate-2 rounded-3xl bg-orange-cta/30 blur-2xl" aria-hidden />
+            <img
+              src={heroImg}
+              alt="Premium Pan-Asian dishes — Thai green curry, stir-fried noodles, jasmine rice with curry paste and coconut milk"
+              width={1400}
+              height={1600}
+              fetchPriority="high"
+              decoding="async"
+              className="relative aspect-square w-full rounded-3xl object-contain "
+            />
           </div>
-        </section>
+        </div>
+      </section>
+
+      <section id="why" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">
+              Why buyers keep us in the range
+            </p>
+            <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
+              Four Reasons Buyers Keep Us on the Order Sheet
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {values.map((v, i) => (
+              <Reveal key={v.title} delay={i * 0.08}>
+                <article className="group h-full rounded-2xl border-t-4 border-orange-cta bg-white/10 p-8 shadow-sm ring-1 ring-white/10 backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition group-hover:bg-orange-cta group-hover:text-white">
+                    <v.icon className="h-6 w-6" aria-hidden />
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-white">{v.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/80 sm:text-base">
+                    {v.body}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
         
         {/* DISTRIBUTION */}
-        <section id="distribution" className="bg-plum/90 py-20 text-white sm:py-24">
+        <section id="distribution" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
           <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-12 px-4 sm:px-6 lg:grid-cols-2">
             <Reveal className="flex h-full">
               <img
@@ -322,7 +321,7 @@ function LandingPage() {
         <VideoCarousel />
 
         {/* PRODUCT RANGE */}
-        <section id="range" className="bg-plum/90 py-20 text-white sm:py-24">
+        <section id="range" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <Reveal className="mx-auto max-w-2xl text-center">
               <div className="max-w-2xl">
@@ -345,7 +344,7 @@ function LandingPage() {
         </section>
 
         {/* SECTORS */}
-        <section id="sectors" className="bg-plum/90 py-20 text-white sm:py-24">
+        <section id="sectors" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <Reveal className="mx-auto max-w-2xl text-center">
               <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">Sectors</p>
@@ -396,7 +395,7 @@ function LandingPage() {
           </div>
         </section>
         {/* VIDEO INTRO SECTION */}
-        <section id="video-intro" className="bg-plum/90 py-20 text-white sm:py-24">
+        <section id="video-intro" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="mb-8 text-center">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
@@ -468,7 +467,7 @@ function LandingPage() {
         </section>
 
 
-    <section id="apply" className="relative overflow-hidden bg-plum/90 py-20 sm:py-24">
+    <section id="apply" className="relative overflow-hidden bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
   <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-30" aria-hidden>
     <div className="absolute h-96 w-96 rounded-full bg-orange-cta/40 blur-3xl" />
   </div>
@@ -505,7 +504,7 @@ function LandingPage() {
 </section>
 
         {/* FAQ */}
-        <section id="faq" className="bg-plum/90 py-20 text-white sm:py-24">
+        <section id="faq" className="bg-plum/90 pt-12 pb-10 text-white sm:pt-20 sm:pb-10">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <Reveal className="mx-auto max-w-2xl text-center">
               <p className="text-2xl font-bold uppercase tracking-wider text-orange-cta">FAQ</p>
