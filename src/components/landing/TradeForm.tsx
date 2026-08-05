@@ -165,7 +165,7 @@ export function TradeForm() {
         <Field label="Contact Name" name="contact" required />
         <Field label="Business Name" name="business" required />
         <Field label="Company Registration Number" name="companyRegistration" required />
-        <Field label="Password" name="password" type="password" required />
+      
         <Field label="Company VAT Number" name="vatNumber" />
         <Field label="Position in Business" name="position" required />
         <Field label="Email" name="email" type="email" required />
